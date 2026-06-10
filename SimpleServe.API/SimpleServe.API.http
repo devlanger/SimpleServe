@@ -1,0 +1,29 @@
+@SimpleServe.API_HostAddress = http://localhost:8100
+
+### Register/refresh server health
+POST {{SimpleServe.API_HostAddress}}/health
+Content-Type: application/json
+Accept: application/json
+{
+  "id": "2",
+  "metadata": {
+    "map": "Dust2",
+    "players": 5,
+    "region": "eu-central",
+    "port": "7777"
+  }
+}
+
+### Get all servers
+GET {{SimpleServe.API_HostAddress}}/servers
+Accept: application/json
+
+### Get server by id
+GET {{SimpleServe.API_HostAddress}}/servers/1
+Accept: application/json
+
+### Delete server by id
+DELETE {{SimpleServe.API_HostAddress}}/servers/1
+Accept: application/json
+
+###

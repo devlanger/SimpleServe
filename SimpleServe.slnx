@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="SimpleServe.API/SimpleServe.API.csproj" />
+  <Project Path="SimpleServe.Core/SimpleServe.Core.csproj" />
+</Solution>

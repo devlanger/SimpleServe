@@ -1,0 +1,14 @@
+services:
+  simpleserve-api:
+    image: simpleserve-api:local
+    build:
+      context: .
+      dockerfile: SimpleServe.API/Dockerfile
+    environment:
+      ASPNETCORE_HTTP_PORTS: "8100"
+      ASPNETCORE_ENVIRONMENT: "Development"
+      Cleanup__IntervalSeconds: "1"
+      Cleanup__HeartbeatTimeoutSeconds: "10"
+    ports:
+      - "8100:8100"
+    restart: unless-stopped
